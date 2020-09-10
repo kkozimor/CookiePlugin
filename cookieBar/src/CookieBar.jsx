@@ -19,10 +19,7 @@ export default class CookieBar extends Component {
                 buttonStyle={{ color: "#4e503b", fontSize: "13px" }}
                 expires={150}
             >
-                This website uses cookies to enhance the user experience.{" "}
-                <span style={{ fontSize: "10px" }}>
-                    This bit of text is smaller :O <a href="https://www.google.com"> {this.props.sampleText} </a>{" "}
-                </span>{" "}
+                {this.props.caption.value} <a href={this.props.link.value}> See more </a>{" "}
             </CookieConsent>
         );
     }

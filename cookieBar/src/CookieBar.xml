@@ -1,16 +1,99 @@
 <?xml version="1.0" encoding="utf-8"?>
-<widget id="objectivity.cookiebar.CookieBar" pluginWidget="true" needsEntityContext="true" offlineCapable="true"
-        supportedPlatform="Web"
-        xmlns="http://www.mendix.com/widget/1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-        xsi:schemaLocation="http://www.mendix.com/widget/1.0/ ../node_modules/mendix/custom_widget.xsd">
+<widget id="objectivity.cookiebar.CookieBar" pluginWidget="true" needsEntityContext="true" offlineCapable="true" supportedPlatform="Web"
+    xmlns="http://www.mendix.com/widget/1.0/"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mendix.com/widget/1.0/ ../node_modules/mendix/custom_widget.xsd">
     <name>Cookie Bar</name>
     <description>Cookies support widget by Objectivity </description>
     <icon/>
     <properties>
         <propertyGroup caption="General">
-            <property key="sampleText" type="string" required="false">
-                <caption>Default value</caption>
-                <description>Sample text input</description>
+            <property key="caption" type="expression" required="false">
+                <caption>Message</caption>
+                <description>Message you want to appear on cookie consent request.</description>
+                <returnType type="String" />
+            </property>
+            <property key="location" type="string" required="false">
+                <caption>Location</caption>
+                <description>Insert one of following: "top", "bottom" or use "none" to disable.</description>
+            </property>
+            <property key="overlay" type="boolean" defaultValue="false" required="true">
+                <caption>Overlay</caption>
+                <description>Whether to show a page obscuring overlay or not.</description>
+            </property>
+        </propertyGroup>
+        <propertyGroup caption="Advanced settings">
+            <property key="disableStyles" type="boolean" defaultValue="false" required="true">
+                <caption>Disable styles</caption>
+                <description>If enabled the component will have no default style.</description>
+            </property>
+            <property key="hideOnAccept" type="boolean" defaultValue="true" required="true">
+                <caption>Hide on accept</caption>
+                <description>If disabled the component will not hide it self after the accept button has been clicked. You will need to hide yourself.</description>
+            </property>
+            <property key="acceptOnScroll" type="boolean" defaultValue="false" required="true">
+                <caption>Accept on scroll</caption>
+                <description>Defines whether "accept" should be fired after the user scrolls a certain distance (see Accept on scroll percentage)</description>
+            </property>
+            <property key="acceptOnScrollPercentage" type="decimal" defaultValue="25" required="true">
+                <caption>Accept on scroll percentage</caption>
+                <description>Percentage of the page height the user has to scroll to trigger the accept function if acceptOnScroll is enabled</description>
+            </property>
+            <property key="cookieName" type="string" required="false">
+                <caption>Cookie name</caption>
+                <description>Name of the cookie used to track whether the user has agreed.</description>
+            </property>
+            <property key="cookieValue" type="string" required="false">
+                <caption>Cookie value</caption>
+                <description>Value to be saved under the cookieName.</description>
+            </property>
+            <property key="declineCookieValue" type="string" required="false">
+                <caption>Decline cookie value</caption>
+                <description>Value to be saved under the cookieName when declined.</description>
+            </property>
+            <property key="setDeclineCookie" type="boolean" defaultValue="true" required="true">
+                <caption>Set decline cookie</caption>
+                <description>Whether to set a cookie when the user clicks "decline".</description>
+            </property>
+            <property key="debug" type="boolean" defaultValue="false" required="true">
+                <caption>Debug mode</caption>
+                <description>Bar will be drawn regardless of cookie for debugging purposes.</description>
+            </property>
+            <property key="expires" type="integer" defaultValue="365" required="true">
+                <caption>Expires</caption>
+                <description>Number of days before the cookie expires.</description>
+            </property>
+        </propertyGroup>
+        <propertyGroup caption="Buttons">
+            <property key="buttonText" type="string" required="false">
+                <caption>Button text</caption>
+                <description>Text to appear on the button</description>
+            </property>
+            <property key="declineButtonText" type="string" required="false">
+                <caption>Decline button text</caption>
+                <description>Text to appear on the decline button</description>
+            </property>
+            <property key="buttonId" type="string" required="false">
+                <caption>Button Id</caption>
+                <description>Id to apply to the button</description>
+            </property>
+            <property key="declineButtonId" type="string" required="false">
+                <caption>Decline button Id</caption>
+                <description>Id to apply to the decline button</description>
+            </property>
+            <property key="flipButtons" type="boolean" defaultValue="false" required="true">
+                <caption>Flip buttons</caption>
+                <description>If enabled the accept and decline buttons will be flipped</description>
+            </property>
+        </propertyGroup>
+        <propertyGroup caption="Cookies policy page">
+            <property key="useCookiesPolicy" type="boolean" defaultValue="false" required="true">
+                <caption>Use cookies policy page</caption>
+                <description>Set the environment variable e.g. @Settings.UseCookiesPolicy</description>
+            </property>
+            <property key="link" type="expression" required="false">
+                <caption>Policy link</caption>
+                <description>Link to your cookies policy info page e.g. "/p/cookies"</description>
+                <returnType type="String" />
             </property>
         </propertyGroup>
     </properties>
