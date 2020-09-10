@@ -10,7 +10,7 @@ export default class CookieBar extends Component {
     }
 
     fixEmptyString(value) {
-        if (value === "") return null;
+        if (value == "") return null;
         else return value;
     }
 
