@@ -10,35 +10,35 @@ export default class CookieBar extends Component {
     }
 
     fixEmptyString(value) {
-        if (value == "") return null;
+        if (value === "") return undefined;
         else return value;
     }
 
     render() {
         return (
             <CookieConsent
-                location={fixEmptyString(this.props.location)}
+                location={this.fixEmptyString(this.props.location)}
                 disableStyles={this.props.disableStyles}
                 hideOnAccept={this.props.hideOnAccept}
-                buttonText={this.props.buttonText}
-                declineButtonText={this.props.declineButtonText}
-                cookieName={this.props.cookieName}
-                cookieValue={this.props.cookieValue}
-                declineCookieValue={this.props.declineCookieValue}
+                buttonText={this.fixEmptyString(this.props.buttonText)}
+                declineButtonText={this.fixEmptyString(this.props.declineButtonText)}
+                cookieName={this.fixEmptyString(this.props.cookieName)}
+                cookieValue={this.fixEmptyString(this.props.cookieValue)}
+                declineCookieValue={this.fixEmptyString(this.props.declineCookieValue)}
                 setDeclineCookie={this.props.setDeclineCookie}
                 onAccept={this.props.onAccept}
                 onDecline={this.props.onDecline}
                 debug={this.props.debug}
                 expires={this.props.expires}
                 overlay={this.props.overlay}
-                containerClasses={this.props.containerClasses}
-                buttonClasses={this.props.buttonClasses}
-                buttonWrapperClasses={this.props.buttonWrapperClasses}
-                declineButtonClasses={this.props.declineButtonClasses}
-                buttonId={this.props.buttonId}
-                declineButtonId={this.props.declineButtonId}
-                contentClasses={this.props.contentClasses}
-                overlayClasses={this.props.overlayClasses}
+                containerClasses={this.fixEmptyString(this.props.containerClasses)}
+                buttonClasses={this.fixEmptyString(this.props.buttonClasses)}
+                buttonWrapperClasses={this.fixEmptyString(this.props.buttonWrapperClasses)}
+                declineButtonClasses={this.fixEmptyString(this.props.declineButtonClasses)}
+                buttonId={this.fixEmptyString(this.props.buttonId)}
+                declineButtonId={this.fixEmptyString(this.props.declineButtonId)}
+                contentClasses={this.fixEmptyString(this.props.contentClasses)}
+                overlayClasses={this.fixEmptyString(this.props.overlayClasses)}
                 // style={this.props.style}
                 // buttonStyle={this.props.buttonStyle}
                 // declineButtonStyle={this.props.declineButtonStyle}
@@ -48,7 +48,7 @@ export default class CookieBar extends Component {
                 enableDeclineButton={this.props.enableDeclineButton}
                 flipButtons={this.props.flipButtons}
                 // ButtonComponent={this.props.ButtonComponent}
-                sameSite={this.props.sameSite}
+                sameSite={this.fixEmptyString(this.props.sameSite)}
                 cookieSecurity={this.props.cookieSecurity}
             >
                 {this.props.caption.value} <a href={this.props.link.value}> See more </a>{" "}
