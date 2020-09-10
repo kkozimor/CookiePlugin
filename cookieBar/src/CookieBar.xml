@@ -62,6 +62,14 @@
                 <caption>Expires</caption>
                 <description>Number of days before the cookie expires.</description>
             </property>
+            <property key="sameSite" type="string" required="false">
+                <caption>Same site</caption>
+                <description>Cookies sameSite attribute value</description>
+            </property>
+            <property key="cookieSecurity" type="boolean" defaultValue="true" required="true">
+                <caption>Cookie security</caption>
+                <description>Cookie security level. Defaults to true unless running on http.</description>
+            </property>
         </propertyGroup>
         <propertyGroup caption="Buttons">
             <property key="buttonText" type="string" required="false">
@@ -94,6 +102,32 @@
                 <caption>Policy link</caption>
                 <description>Link to your cookies policy info page e.g. "/p/cookies"</description>
                 <returnType type="String" />
+            </property>
+        </propertyGroup>
+        <propertyGroup caption="Advanced styling">
+            <property key="containerClasses" type="string" required="false">
+                <caption>Container classes</caption>
+                <description></description>
+            </property>
+            <property key="buttonClasses" type="string" required="false">
+                <caption>Button classes</caption>
+                <description></description>
+            </property>
+            <property key="buttonWrapperClasses" type="string" required="false">
+                <caption>Button wrapper classes</caption>
+                <description></description>
+            </property>
+            <property key="declineButtonClasses" type="string" required="false">
+                <caption>Decline button classes</caption>
+                <description></description>
+            </property>
+            <property key="contentClasses" type="string" required="false">
+                <caption>Content classes</caption>
+                <description></description>
+            </property>
+            <property key="overlayClasses" type="string" required="false">
+                <caption>Overlay classes</caption>
+                <description></description>
             </property>
         </propertyGroup>
     </properties>
