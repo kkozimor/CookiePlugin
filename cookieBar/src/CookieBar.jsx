@@ -10,17 +10,17 @@ export default class CookieBar extends Component {
     }
 
     fixEmptyString(value) {
-        if (value === "") return null;
+        if (value === "") return undefined;
         else return value;
     }
 
     render() {
         return (
             <CookieConsent
-                location={fixEmptyString(this.props.location)}
+                location={this.fixEmptyString(this.props.location)}
                 disableStyles={this.props.disableStyles}
                 hideOnAccept={this.props.hideOnAccept}
-                buttonText={this.props.buttonText}
+                buttonText={this.fixEmptyString(this.props.buttonText)}
                 declineButtonText={this.props.declineButtonText}
                 cookieName={this.props.cookieName}
                 cookieValue={this.props.cookieValue}

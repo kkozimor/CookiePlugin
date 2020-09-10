@@ -88,6 +88,10 @@
                 <caption>Decline button Id</caption>
                 <description>Id to apply to the decline button</description>
             </property>
+            <property key="enableDeclineButton" type="boolean" defaultValue="false" required="true">
+                <caption>Enable decline button</caption>
+                <description>If enabled the decline button will be rendered</description>
+            </property>
             <property key="flipButtons" type="boolean" defaultValue="false" required="true">
                 <caption>Flip buttons</caption>
                 <description>If enabled the accept and decline buttons will be flipped</description>
