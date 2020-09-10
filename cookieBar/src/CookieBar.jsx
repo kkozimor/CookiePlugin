@@ -12,18 +12,41 @@ export default class CookieBar extends Component {
     render() {
         return (
             <CookieConsent
-                location="bottom"
-                buttonText="Sure man!!"
-                cookieName="myAwesomeCookieName2"
-                style={{ background: "#2B373B" }}
-                buttonStyle={{ color: "#4e503b", fontSize: "13px" }}
-                expires={150}
-            >
-                This website uses cookies to enhance the user experience.{" "}
-                <span style={{ fontSize: "10px" }}>
-                    This bit of text is smaller :O <a href="https://www.google.com"> {this.props.sampleText} </a>{" "}
-                </span>{" "}
-            </CookieConsent>
+                location={this.props.location}
+                disableStyles={this.props.disableStyles}
+                hideOnAccept={this.props.hideOnAccept}
+                buttonText={this.props.buttonText}
+                declineButtonText={this.props.declineButtonText}
+                cookieName={this.props.cookieName}
+                cookieValue={this.props.cookieValue}
+                declineCookieValue={this.props.declineCookieValue}
+                setDeclineCookie={this.props.setDeclineCookie}
+                onAccept={this.props.onAccept}
+                onDecline={this.props.onDecline}
+                debug={this.props.debug}
+                expires={this.props.expires}
+                extraCookieOptions={this.props.extraCookieOptions}
+                overlay={this.props.overlay}
+                containerClasses={this.props.containerClasses}
+                buttonClasses={this.props.buttonClasses}
+                buttonWrapperClasses={this.props.buttonWrapperClasses}
+                declineButtonClasses={this.props.declineButtonClasses}
+                buttonId={this.props.buttonId}
+                declineButtonId={this.props.declineButtonId}
+                contentClasses={this.props.contentClasses}
+                overlayClasses={this.props.overlayClasses}
+                style={this.props.style}
+                buttonStyle={this.props.buttonStyle}
+                declineButtonStyle={this.props.declineButtonStyle}
+                contentStyle={this.props.contentStyle}
+                overlayStyle={this.props.overlayStyle}
+                disableButtonStyles={this.props.disableButtonStyles}
+                enableDeclineButton={this.props.enableDeclineButton}
+                flipButtons={this.props.flipButtons}
+                ButtonComponent={this.props.ButtonComponent}
+                sameSite={this.props.sameSite}
+                cookieSecurity={this.props.cookieSecurity}
+            ></CookieConsent>
         );
     }
 }

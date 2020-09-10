@@ -12,6 +12,13 @@
                 <caption>Default value</caption>
                 <description>Sample text input</description>
             </property>
+            <property key="location" type="string" required="true">
+                <caption>Default value</caption>
+                <description>Syntactic sugar to easily enable you to place the bar at the top or the bottom of the browser window. Use "none" to disable.string, "top", "bottom" or "none"</description>
+            </property>
+
+
+
         </propertyGroup>
     </properties>
 </widget>
