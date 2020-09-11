@@ -1,5 +1,5 @@
 import CookieConsent, { Cookies } from "react-cookie-consent";
-
+import Parser from "html-react-parser";
 import { Component, createElement } from "react";
 
 import "./ui/CookieBar.css";
@@ -12,6 +12,10 @@ export default class CookieBar extends Component {
     fixEmptyString(value) {
         if (value === "") return undefined;
         else return value;
+    }
+
+    hideConditionally() {
+        return this.props.useCookiesPolicy ? {} : { display: "none" };
     }
 
     render() {
@@ -52,7 +56,14 @@ export default class CookieBar extends Component {
                     sameSite={this.fixEmptyString(this.props.sameSite)}
                     cookieSecurity={this.props.cookieSecurity}
                 >
-                    {this.props.caption.value} <a href={this.props.link.value}> {this.props.linkText} </a>{" "}
+                    {Parser(this.props.caption.value)}
+                    <button
+                        class={this.props.policyClasses}
+                        style={this.hideConditionally()}
+                        onClick={this.props.link.execute}
+                    >
+                        {this.props.linkText}
+                    </button>
                 </CookieConsent>
             </div>
         );
