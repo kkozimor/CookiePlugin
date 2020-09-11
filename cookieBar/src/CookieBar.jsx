@@ -52,7 +52,7 @@ export default class CookieBar extends Component {
                     sameSite={this.fixEmptyString(this.props.sameSite)}
                     cookieSecurity={this.props.cookieSecurity}
                 >
-                    {this.props.caption.value} <a href={this.props.link.value}> See more </a>{" "}
+                    {this.props.caption.value} <a href={this.props.link.value}> {this.props.linkText} </a>{" "}
                 </CookieConsent>
             </div>
         );
