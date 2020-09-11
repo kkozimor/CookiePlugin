@@ -29,13 +29,10 @@
                 <caption>Use cookies policy page</caption>
                 <description>Select if you want to add link to your policy page.</description>
             </property>
-
             <property key="link" type="action">
                 <caption>Policy button action</caption>
                 <description>Action Link to your cookies policy info page e.g. "p/cookies"</description>
             </property>
-
-
             <property key="linkText" type="string" defaultValue="See more" required="false">
                 <caption>Policy button text</caption>
                 <description>Text to appear o a link to policy page</description>
