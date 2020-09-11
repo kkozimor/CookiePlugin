@@ -12,9 +12,14 @@
                 <description>Message you want to appear on cookie consent request.</description>
                 <returnType type="String" />
             </property>
-            <property key="location" type="string" required="false">
+            <property key="location" type="enumeration" defaultValue="bottom">
                 <caption>Location</caption>
-                <description>Insert one of following: "top", "bottom" or use "none" to disable.</description>
+                <description>Choose one of following: "top", "bottom" or use "none" to disable.</description>
+                <enumerationValues>
+                    <enumerationValue key="bottom">Bottom</enumerationValue>
+                    <enumerationValue key="top">Top</enumerationValue>
+                    <enumerationValue key="none">None</enumerationValue>
+                </enumerationValues>
             </property>
             <property key="overlay" type="boolean" defaultValue="false" required="true">
                 <caption>Overlay</caption>
