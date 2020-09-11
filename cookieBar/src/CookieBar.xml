@@ -31,8 +31,8 @@
             </property>
 
             <property key="link" type="action">
-                <caption>Policy link in action</caption>
-                <description>Action Link to your cookies policy info page e.g. "p/cookies"</description>
+                <caption>Policy link</caption>
+                <description>Add a link to your cookies policy info page e.g. "p/cookies"</description>
             </property>
 
 

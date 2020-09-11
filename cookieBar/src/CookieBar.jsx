@@ -18,7 +18,7 @@ export default class CookieBar extends Component {
         return (
             <div id="cookiebar-container" style={this.props.style} className={this.props.class}>
                 <CookieConsent
-                    location={this.fixEmptyString(this.props.location)}
+                    location={this.props.location}
                     disableStyles={this.props.disableStyles}
                     hideOnAccept={this.props.hideOnAccept}
                     buttonText={this.fixEmptyString(this.props.buttonText)}
