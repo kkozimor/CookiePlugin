@@ -26,6 +26,7 @@
   },
   "dependencies": {
     "classnames": "^2.2.6",
+    "html-react-parser": "^0.14.0",
     "react-cookie-consent": "^5.1.3"
   }
 }
