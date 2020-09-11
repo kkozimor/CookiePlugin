@@ -16,7 +16,7 @@ export default class CookieBar extends Component {
 
     render() {
         return (
-            <div id="chatbot-container" style={this.props.style} className={this.props.class}>
+            <div id="cookiebar-container" style={this.props.style} className={this.props.class}>
                 <CookieConsent
                     location={this.fixEmptyString(this.props.location)}
                     disableStyles={this.props.disableStyles}
