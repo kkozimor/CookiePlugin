@@ -29,18 +29,20 @@
                 <caption>Use cookies policy page</caption>
                 <description>Set the environment variable e.g. @Settings.UseCookiesPolicy</description>
             </property>
-            <property key="link" type="expression" required="false">
-                <caption>Policy link</caption>
-                <description>Link to your cookies policy info page e.g. "p/cookies"</description>
-                <returnType type="String" />
+
+            <property key="link" type="action">
+                <caption>Policy link in action</caption>
+                <description>Action Link to your cookies policy info page e.g. "p/cookies"</description>
             </property>
+
+
             <property key="linkText" type="string" defaultValue="See more" required="false">
                 <caption>Link text</caption>
                 <description>Text to appear o a link to policy page</description>
             </property>
         </propertyGroup>
         <propertyGroup caption="Buttons">
-            <property key="buttonText" type="string" required="false">
+            <property key="buttonText" type="string" defaultValue="Accept" required="false">
                 <caption>Accept button text</caption>
                 <description>Text to appear on the accept button</description>
             </property>
@@ -52,7 +54,7 @@
                 <caption>Enable decline button</caption>
                 <description>If enabled the decline button will be rendered</description>
             </property>
-            <property key="declineButtonText" type="string" required="false">
+            <property key="declineButtonText" type="string" defaultValue="Decline" required="false">
                 <caption>Decline button text</caption>
                 <description>Text to appear on the decline button</description>
             </property>
@@ -68,27 +70,27 @@
         <propertyGroup caption="Advanced styling">
             <property key="containerClasses" type="string" required="false">
                 <caption>Container classes</caption>
-                <description></description>
+                <description>CSS classes to apply to the surrounding container</description>
             </property>
             <property key="buttonClasses" type="string" required="false">
                 <caption>Button classes</caption>
-                <description></description>
+                <description>CSS classes to apply to the button</description>
             </property>
             <property key="buttonWrapperClasses" type="string" required="false">
                 <caption>Button wrapper classes</caption>
-                <description></description>
+                <description>CSS classes to apply to the div wrapping the buttons</description>
             </property>
             <property key="declineButtonClasses" type="string" required="false">
                 <caption>Decline button classes</caption>
-                <description></description>
+                <description>CSS classes to apply to the decline button</description>
             </property>
             <property key="contentClasses" type="string" required="false">
                 <caption>Content classes</caption>
-                <description></description>
+                <description>CSS classes to apply to the content</description>
             </property>
             <property key="overlayClasses" type="string" required="false">
                 <caption>Overlay classes</caption>
-                <description></description>
+                <description>CSS classes to apply to the surrounding overlay</description>
             </property>
         </propertyGroup>
         <propertyGroup caption="Advanced settings">
@@ -108,15 +110,15 @@
                 <caption>Accept on scroll percentage</caption>
                 <description>Percentage of the page height the user has to scroll to trigger the accept function if acceptOnScroll is enabled</description>
             </property>
-            <property key="cookieName" type="string" required="false">
+            <property key="cookieName" type="string" defaultValue="Your cookie name" required="false">
                 <caption>Cookie name</caption>
                 <description>Name of the cookie used to track whether the user has agreed.</description>
             </property>
-            <property key="cookieValue" type="string" required="false">
+            <property key="cookieValue" type="string" defaultValue="1" required="false">
                 <caption>Cookie value</caption>
                 <description>Value to be saved under the cookieName.</description>
             </property>
-            <property key="declineCookieValue" type="string" required="false">
+            <property key="declineCookieValue" type="string" defaultValue="0" required="false">
                 <caption>Decline cookie value</caption>
                 <description>Value to be saved under the cookieName when declined.</description>
             </property>
