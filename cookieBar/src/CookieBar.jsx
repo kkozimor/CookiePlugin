@@ -14,7 +14,7 @@ export default class CookieBar extends Component {
         else return value;
     }
 
-    hideButton() {
+    hideConditionally() {
         return this.props.useCookiesPolicy ? {} : { display: "none" };
     }
 
@@ -57,7 +57,11 @@ export default class CookieBar extends Component {
                     cookieSecurity={this.props.cookieSecurity}
                 >
                     {Parser(this.props.caption.value)}
-                    <button class="btn-link" style={this.hideButton()} onClick={this.props.action.execute}>
+                    <button
+                        class={this.props.policyClasses}
+                        style={this.hideConditionally()}
+                        onClick={this.props.link.execute}
+                    >
                         {this.props.linkText}
                     </button>
                 </CookieConsent>
